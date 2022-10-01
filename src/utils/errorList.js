@@ -43,4 +43,20 @@ module.exports = {
     status: 401,
     message: 'Unauthorized user',
   },
+  TOKENNOTFOUND: {
+    status: 404,
+    message: 'Invalid token',
+  },
+  TokenExpiredError: {
+    status: 400,
+    message: 'jwt expired',
+  },
+  JsonWebTokenError: {
+    status: 400,
+    message: 'jwt malformed',
+  },
+  NotBeforeError: {
+    status: 400,
+    message: 'jwt not active',
+  },
 };

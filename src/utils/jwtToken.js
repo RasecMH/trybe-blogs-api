@@ -10,12 +10,12 @@ const createToken = (payload) => {
 };
 
 const validateToken = (token) => {
-  if (!token) throw new Error('token not found');
+  if (!token) throw new Error('TOKENNOTFOUND');
 
   try {
     return jwt.verify(token, process.env.JWT_SECRET);
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(error.name);
   }
 };
 
