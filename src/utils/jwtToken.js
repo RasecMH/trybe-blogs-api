@@ -9,7 +9,7 @@ const createToken = (payload) => {
   return jwt.sign(payload, process.env.JWT_SECRET, jwtConfig);
 };
 
-const validateToken = (token) => {
+const validateToken = async (token) => {
   if (!token) throw new Error('TOKENNOTFOUND');
 
   try {
