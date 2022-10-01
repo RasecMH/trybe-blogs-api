@@ -44,12 +44,12 @@ module.exports = {
     message: 'Unauthorized user',
   },
   TOKENNOTFOUND: {
-    status: 404,
-    message: 'Invalid token',
+    status: 401,
+    message: 'Token not found',
   },
   TokenExpiredError: {
-    status: 400,
-    message: 'jwt expired',
+    status: 401,
+    message: 'Expired or invalid token',
   },
   JsonWebTokenError: {
     status: 400,
