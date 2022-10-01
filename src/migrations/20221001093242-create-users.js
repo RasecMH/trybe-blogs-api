@@ -11,7 +11,7 @@ module.exports = {
           autoIncrement: true,
           primaryKey: true,
         },
-        displayName: {
+        display_name: {
           type: Sequelize.STRING,
           allowNull: false,
         },
