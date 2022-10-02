@@ -34,4 +34,11 @@ const updateById = async (id, title, content, userId) => {
   return getById(id);
 };
 
-module.exports = { create, getAll, getById, updateById };
+const deleteById = async (id, userId) => {
+  const post = await getById(id);
+  if (!post) throw new Error('POSTNOTFOUND');
+  if (post.user.id !== userId) throw new Error('UNAUTHORIZEDUSER');
+  await post.destroy();
+};
+
+module.exports = { create, getAll, getById, updateById, deleteById };

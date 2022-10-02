@@ -10,5 +10,6 @@ router.post('/', authToken, validatePostFields, postController.create);
 router.get('/', authToken, postController.getAll);
 router.get('/:id', authToken, postController.getById);
 router.put('/:id', authToken, validatePostUpdate, postController.updateById);
+router.delete('/:id', authToken, postController.deleteById);
 
 module.exports = router;
