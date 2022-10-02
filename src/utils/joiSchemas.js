@@ -15,10 +15,12 @@ const userSchema = Joi.object({
 
 const loginSchema = Joi.object({
   email: Joi.string().email().required().messages({
-    'string.required': 'EMPITYFIELDS',
+    'string.email': 'INVALIDEMAILFIELD',
+    'string.empty': 'EMPITYFIELDS',
   }),
   password: Joi.string().required().messages({
     'string.required': 'EMPITYFIELDS',
+    'string.empty': 'EMPITYFIELDS',
   }),
 });
 
