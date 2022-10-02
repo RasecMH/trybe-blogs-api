@@ -21,4 +21,11 @@ const getAll = async (_req, res) => {
   const allPosts = await postService.getAll();
   return res.status(200).json(allPosts);
 };
-module.exports = { create, getAll };
+
+const getById = async (req, res, next) => {
+  const { id } = req.params;
+  const post = await postService.getById(id);
+  if (!post) return next({ message: 'POSTNOTFOUND' });
+  return res.status(200).json(post);
+};
+module.exports = { create, getAll, getById };
