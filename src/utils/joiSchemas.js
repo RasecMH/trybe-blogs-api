@@ -26,7 +26,8 @@ const loginSchema = Joi.object({
 
 const categoriesSchema = Joi.object({
   name: Joi.string().required().messages({
-    'string.required': 'EMPITYNAMEFIELD',
+    'any.required': 'EMPITYNAMEFIELD',
+    'string.empty': 'EMPITYNAMEFIELD',
   }),
 });
 
