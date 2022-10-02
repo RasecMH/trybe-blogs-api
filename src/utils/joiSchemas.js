@@ -10,7 +10,7 @@ const userSchema = Joi.object({
   password: Joi.string().required().min(6).messages({
     'string.min': 'INVALIDPASSWORDLENGTH',
   }),
-  image: Joi.string(),
+  image: Joi.string().allow(null, ''),
 });
 
 const loginSchema = Joi.object({
