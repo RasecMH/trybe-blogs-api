@@ -1,8 +1,8 @@
 const errorList = require('../utils/errorList');
 
 const error = (err, req, res, _next) => {
-  // console.log('Xablau', err);
-  const errorInfo = errorList[err.message];
+  console.log('Xablau', err);
+  const errorInfo = errorList[err.message] || err;
   const status = errorInfo.status || 500;
   const message = errorInfo.message || 'Internal server error';
 
