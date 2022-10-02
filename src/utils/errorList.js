@@ -52,11 +52,11 @@ module.exports = {
     message: 'Expired or invalid token',
   },
   JsonWebTokenError: {
-    status: 400,
-    message: 'jwt malformed',
+    status: 401,
+    message: 'Expired or invalid token',
   },
   NotBeforeError: {
-    status: 400,
+    status: 401,
     message: 'jwt not active',
   },
 };
