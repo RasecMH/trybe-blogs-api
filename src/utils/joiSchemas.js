@@ -34,6 +34,7 @@ const categoriesSchema = Joi.object({
 const postSchema = Joi.object({
   title: Joi.string().required().messages({
     'string.required': 'EMPITYFIELDS',
+    'string.empty': 'EMPITYFIELDS',
   }),
   content: Joi.string().required().messages({
     'string.required': 'EMPITYFIELDS',
