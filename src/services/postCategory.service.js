@@ -1,8 +1,7 @@
-// // const { PostCategory } = require('../models');
+const { PostCategory } = require('../models');
 
-// const create = async (postId, categoryId) => {
-//   console.log('postCategoryService: ', postId, categoryId);
-//   // await PostCategory.create({ postId, categoryId });
-// };
+const create = async (postId, categoryId) => {
+  await PostCategory.create({ postId, categoryId });
+};
 
-// module.exports = { create };
+module.exports = { create };
