@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const createToken = (payload) => {
+const createToken = async (payload) => {
   const jwtConfig = {
     expiresIn: '1d',
     algorithm: 'HS256',
