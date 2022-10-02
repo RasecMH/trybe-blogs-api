@@ -6,5 +6,6 @@ const authToken = require('../middlewares/authToken');
 const router = express.Router();
 
 router.post('/', authToken, validateCategoriesFields, categoriesController.create);
+router.get('/', authToken, categoriesController.getAll);
 
 module.exports = router;
