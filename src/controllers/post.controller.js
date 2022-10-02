@@ -28,4 +28,16 @@ const getById = async (req, res, next) => {
   if (!post) return next({ message: 'POSTNOTFOUND' });
   return res.status(200).json(post);
 };
-module.exports = { create, getAll, getById };
+
+const updateById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+  const { title, content } = req.body;
+  const postUpdated = await postService.updateById(id, title, content, req.locals.id);
+  if (!postUpdated) return next({ message: 'POSTNOTFOUND' });
+  return res.status(200).json(postUpdated);
+  } catch (error) {
+    next(error);
+  }
+};
+module.exports = { create, getAll, getById, updateById };

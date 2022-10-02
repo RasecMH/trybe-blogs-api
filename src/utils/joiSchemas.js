@@ -47,6 +47,8 @@ const postSchema = Joi.object({
 const postUpdateSchema = Joi.object({
   title: Joi.string().required().messages({
     'string.required': 'EMPITYFIELDS',
+    'string.empty': 'EMPITYFIELDS',
+
   }),
   content: Joi.string().required().messages({
     'string.required': 'EMPITYFIELDS',

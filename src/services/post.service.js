@@ -23,4 +23,15 @@ const getById = async (id) => BlogPost.findByPk(id,
   { model: Category, as: 'categories' },
   ] });
 
-module.exports = { create, getAll, getById };
+const updateById = async (id, title, content, userId) => {
+  const validateUser = await getById(id);
+  if (validateUser.user.id !== userId) throw new Error('UNAUTHORIZEDUSER');
+  await BlogPost.update({ title, content }, { where: { id } },
+  { include: [
+  { model: User, as: 'user', attributes: { exclude: ['password'] } },
+  { model: Category, as: 'categories' },
+  ] });
+  return getById(id);
+};
+
+module.exports = { create, getAll, getById, updateById };
