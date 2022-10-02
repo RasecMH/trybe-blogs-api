@@ -30,4 +30,14 @@ const getById = async (req, res, next) => {
   }
 };
 
-module.exports = { create, getAll, getById };
+const deleteById = async (req, res, next) => {
+  try {
+    const { id } = req.locals;
+    await userServices.deleteById(id);
+    return res.sendStatus(204);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { create, getAll, getById, deleteById };

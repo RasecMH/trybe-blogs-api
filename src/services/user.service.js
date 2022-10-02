@@ -22,4 +22,10 @@ const getById = async (id) => {
     return user;
 };
 
-module.exports = { create, getAll, getById };
+const deleteById = async (id) => {
+    const user = await User.destroy({ where: { id } });
+    if (!user) throw new Error('USERNOTFOUND');
+    return user;
+};
+
+module.exports = { create, getAll, getById, deleteById };
