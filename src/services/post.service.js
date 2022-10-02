@@ -18,7 +18,3 @@ const create = async ({ title, content, categoryIds, id }) => {
 };
 
 module.exports = { create };
-
-// const teste = [null, null];
-// const mapTest = teste.map((test) => (test || [])).flat(1);
-// console.log(!mapTest.length);
