@@ -1,4 +1,4 @@
-Este projeto foi desenvolvido durante o curso de Desenvolvimento Web Full Stack da Trybe com o objetivo de reforçar meus aprendizados de Javascript, Dcoker, NodeJs, Express, MySQL, Sequelize e Arquitetura MSC.
+Este projeto foi desenvolvido durante o curso de Desenvolvimento Web Full Stack da Trybe com o objetivo de reforçar meus aprendizados de Javascript, Docker, NodeJs, Express, MySQL, Sequelize e Arquitetura MSC.
 
 A aplicação se trata de uma API para um blog, capaz de criar e autenticar usuários, criar e editar postagens e categorias fazendo conexão com um banco de dados SQL.
 
