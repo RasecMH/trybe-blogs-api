@@ -16,6 +16,7 @@ const options = {
   username: process.env.MYSQL_USER || 'root',
   password: process.env.MYSQL_PASSWORD || '1234',
   dialect: 'mysql',
+  dialectModule: require('mysql2'),
   dialectOptions: {
     timezone: 'Z',
   },
