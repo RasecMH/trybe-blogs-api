@@ -24,7 +24,7 @@ app.use(express.json());
 
 app.use('/login', loginRoute);
 app.use('/user', userRoute);
-app.use('/categories', categoriesRoute);
+app.use('/api/categories', categoriesRoute);
 app.use('/post', postRoute);
 
 app.use(errorMiddleware);
