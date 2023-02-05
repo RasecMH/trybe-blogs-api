@@ -22,10 +22,10 @@ app.get('/api/item/:slug', (req, res) => {
 
 app.use(express.json());
 
-app.use('/login', loginRoute);
-app.use('/user', userRoute);
+app.use('/api/login', loginRoute);
+app.use('/api/user', userRoute);
 app.use('/api/categories', categoriesRoute);
-app.use('/post', postRoute);
+app.use('/api/post', postRoute);
 
 app.use(errorMiddleware);
 
