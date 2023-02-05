@@ -19,7 +19,7 @@
   },
   "main": "src/server.js",
   "scripts": {
-    "prestart": "npx node_modules/.bin/sequelize db:create && npx node_modules/.bin/sequelize db:migrate",
+    "prestart": "node_modules/.bin/sequelize db:create && node_modules/.bin/sequelize db:migrate",
     "start": "node .",
     "start:test": "API_PORT=3030 NODE_ENV=test npm start",
     "kill:test": "if lsof -t -i:3030; then kill -9 $(lsof -t -i:3030); fi",
