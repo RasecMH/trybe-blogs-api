@@ -6,7 +6,7 @@ const userRoute = require('./routers/user.router');
 const postRoute = require('./routers/post.router');
 // ...
 
-const app = express();
+const app = require('../api/index');
 
 app.use(express.json());
 
