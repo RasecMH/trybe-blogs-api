@@ -17,7 +17,7 @@
     "sequelize": "6.3.4",
     "shelljs": "0.8.4"
   },
-  "main": "src/server.js",
+  "main": "api/server.js",
   "scripts": {
     "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate",
     "start": "node .",
