@@ -15,7 +15,8 @@
     "morgan": "1.10.0",
     "mysql2": "2.1.0",
     "sequelize": "6.3.4",
-    "shelljs": "0.8.4"
+    "shelljs": "0.8.4",
+    "cors": "2.8.5"
   },
   "main": "api/server.js",
   "scripts": {
